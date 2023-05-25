@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Color Pallete for Project Arahku -->
+    <color name="primary_color">#FFFFFFFF</color>
+    <color name="secondary_color">#2F1B41</color>
+    <color name="accent_color_1">#FECD51</color>
+    <color name="accent_color_2">#9F1E49</color>
 </resources>
