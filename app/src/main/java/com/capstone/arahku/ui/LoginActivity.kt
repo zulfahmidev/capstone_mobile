@@ -1,9 +1,8 @@
 package com.capstone.arahku.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.capstone.arahku.R
+import androidx.appcompat.app.AppCompatActivity
 import com.capstone.arahku.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

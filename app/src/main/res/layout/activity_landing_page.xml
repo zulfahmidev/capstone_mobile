@@ -20,14 +20,16 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/landing_img" />
+            android:src="@drawable/landing_img"
+            android:contentDescription="@string/cd_landing_image" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/logo_arahku"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/logo"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_logo_arahku" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -35,47 +37,54 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Selamat Datang di Arahku!"
+        android:text="@string/welcome_to_arahku"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/landing_card" />
+        app:layout_constraintTop_toBottomOf="@id/landing_card"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/tv_moto"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Di mana arah bertemu takdir"
+        android:text="@string/slogan_arahku"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
         app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
         app:layout_constraintStart_toStartOf="@+id/tv_welcome" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/landing_btn_register"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#9F1E49"
-        android:text="Daftar"
+        android:backgroundTint="@color/accent_color_2"
+        android:text="@string/txt_btn_register"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/landing_btn_login" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/landing_btn_login"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/accent_color_1"
-        android:text="Login"
+        android:text="@string/txt_btn_login"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_moto" />
 
@@ -83,13 +92,13 @@
         android:id="@+id/landing_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="26dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+        android:text="@string/landing_description"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

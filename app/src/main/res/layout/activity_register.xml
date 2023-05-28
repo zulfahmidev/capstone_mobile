@@ -14,16 +14,18 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
 
         <TextView
             android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DAFTAR"
-            android:textStyle="bold"
-            android:textSize="24sp"/>
+            android:text="@string/txt_tv_register"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameEditTextLayout"
@@ -34,7 +36,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="Nama"
-            android:hint="Nama"
+            android:hint="@string/hint_name"
             app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -54,7 +56,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="Email"
-            android:hint="Email"
+            android:hint="@string/hint_email"
             app:startIconDrawable="@drawable/ic_email">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -74,7 +76,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="No. Telephone"
-            android:hint="No. Telephone"
+            android:hint="@string/hint_phone"
             app:startIconDrawable="@drawable/ic_call">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -94,7 +96,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="Tanggal Lahir"
-            android:hint="Tanggal Lahir"
+            android:hint="@string/hint_birth_date"
             app:startIconDrawable="@drawable/ic_date">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -114,7 +116,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="Alamat"
-            android:hint="Alamat"
+            android:hint="@string/hint_address"
             app:startIconDrawable="@drawable/ic_place">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -135,7 +137,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="Password"
-            android:hint="Password"
+            android:hint="@string/hint_password"
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@drawable/ic_lock">
 
@@ -150,24 +152,25 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_gravity="end"
             android:layout_marginEnd="16dp"
-            android:layout_gravity="end">
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sudah memiliki akun?"
-                android:textSize="16sp"/>
+                android:text="@string/tv_have_an_account"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/text_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="Masuk di sini"
+                android:text="@string/tv_login_here"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>
@@ -178,8 +181,9 @@
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
-        android:text="Login"
+        android:layout_marginBottom="30dp"
+        android:text="@string/txt_btn_register"
+        android:textStyle="bold"
         android:backgroundTint="@color/accent_color_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

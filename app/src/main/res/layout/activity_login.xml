@@ -14,14 +14,15 @@
         android:src="@drawable/login_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/cd_login_image" />
 
     <TextView
         android:id="@+id/tv_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="LOGIN"
+        android:text="@string/txt_tv_login"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -38,7 +39,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:autofillHints="Email"
-        android:hint="Email"
+        android:hint="@string/hint_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_login"
@@ -61,7 +62,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:autofillHints="Password"
-        android:hint="Password"
+        android:hint="@string/hint_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
@@ -82,8 +83,10 @@
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
-        android:text="Login"
+        android:layout_marginBottom="30dp"
+        android:text="@string/txt_btn_login"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:backgroundTint="@color/accent_color_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,13 +98,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Belum memiliki akun?"
+            android:text="@string/tv_dont_have_account"
             android:textSize="16sp"/>
 
         <TextView
@@ -109,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="Daftar di sini"
+            android:text="@string/tv_register_here"
             android:textSize="16sp"
             android:textStyle="bold"/>
 

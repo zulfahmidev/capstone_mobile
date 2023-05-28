@@ -1,3 +1,38 @@
 <resources>
+
     <string name="app_name">Arahku</string>
+    <!-- cd = Content Description -->
+    <string name="cd_landing_image">Landing Image</string>
+    <string name="cd_logo_arahku">Logo Arahku</string>
+    <string name="txt_btn_login">Masuk</string>
+    <string name="txt_btn_register">Daftar</string>
+    <string name="slogan_arahku">Di mana arah bertemu takdir</string>
+    <string name="welcome_to_arahku">Selamat Datang di Arahku!</string>
+    <string name="landing_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</string>
+    <string name="cd_login_image">Login Image</string>
+    <string name="txt_tv_login">LOGIN</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="tv_dont_have_account">Belum memiliki akun?</string>
+    <string name="tv_register_here">Daftar disini</string>
+    <string name="txt_tv_register">REGISTER</string>
+    <string name="hint_name">Nama</string>
+    <string name="hint_phone">No Telepon</string>
+    <string name="hint_birth_date">Tanggal Lahir</string>
+    <string name="hint_address">Alamat</string>
+    <string name="tv_have_an_account">Sudah memiliki akun?</string>
+    <string name="tv_login_here">Masuk di sini</string>
+    <string name="tv_hello_user">Hello User,</string>
+    <string name="tv_greeting">Good Morning</string>
+    <string name="tv_quotes">“Talent is nothing without dedication and discipline,and dedication and discipline is a talent in itself” - Luke Campbell</string>
+    <string name="tv_home_question">Sudah berjodoh dengan jurusan impian?</string>
+    <string name="txt_button_sudah">Sudah</string>
+    <string name="txt_button_ragu_ragu">Ragu-ragu</string>
+    <string name="txt_button_belum">Belum</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profil</string>
+    <string name="title_chat">Pesan</string>
+    <string name="title_kating">Kating</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

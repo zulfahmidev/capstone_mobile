@@ -13,4 +13,6 @@
     <color name="secondary_color">#2F1B41</color>
     <color name="accent_color_1">#FECD51</color>
     <color name="accent_color_2">#9F1E49</color>
+    <color name="light_gray">#D9D9D9</color>
+    <color name="dark_gray">#969696</color>
 </resources>
