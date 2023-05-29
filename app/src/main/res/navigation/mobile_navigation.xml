@@ -18,10 +18,17 @@
         tools:layout="@layout/fragment_chat"/>
 
     <fragment
-        android:id="@+id/navigation_kating"
-        android:name="com.capstone.arahku.ui.kating.KatingFragment"
-        android:label="@string/title_kating"
-        tools:layout="@layout/fragment_kating"/>
+        android:id="@+id/navigation_info_jurusan"
+        android:name="com.capstone.arahku.ui.info_jurusan.InfoJurusanFragment"
+        android:label="@string/title_info_jurusan"
+        tools:layout="@layout/fragment_info_jurusan"/>
+
+
+    <fragment
+        android:id="@+id/navigation_friend"
+        android:name="com.capstone.arahku.ui.friend.FriendFragment"
+        android:label="@string/title_friend"
+        tools:layout="@layout/fragment_friend"/>
 
     <fragment
         android:id="@+id/navigation_profile"

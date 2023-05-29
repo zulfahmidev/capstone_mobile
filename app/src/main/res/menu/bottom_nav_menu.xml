@@ -12,9 +12,14 @@
         android:title="@string/title_chat" />
 
     <item
-        android:id="@+id/navigation_kating"
+        android:id="@+id/navigation_info_jurusan"
+        android:icon="@drawable/ic_info_jurusan"
+        android:title="@string/title_info_jurusan" />
+
+    <item
+        android:id="@+id/navigation_teman"
         android:icon="@drawable/ic_friends"
-        android:title="@string/title_kating" />
+        android:title="@string/title_friend" />
 
     <item
         android:id="@+id/navigation_profile"
