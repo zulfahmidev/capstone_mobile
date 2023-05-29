@@ -3,6 +3,7 @@ package com.capstone.arahku.ui
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.capstone.arahku.MainActivity
 import com.capstone.arahku.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -18,6 +19,9 @@ class LoginActivity : AppCompatActivity() {
 
         binding.textButton.setOnClickListener {
             startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+        }
+        binding.btnLogin.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
         }
     }
 

@@ -38,4 +38,7 @@
     <string name="minat_bakat">Minat Bakat</string>
     <string name="otak_kanan_otak_kiri"><![CDATA[Otak Kanan & Otak Kiri]]></string>
     <string name="kelayakan_jurusan">Kelayakan Jurusan</string>
+    <string name="empty_field_error">Tolong isi Field yang kosong</string>
+    <string name="register_success_message">Pendaftaran berhasil, silahkan tunggu email verifikasi :)</string>
+    <string name="register_failure_message">Pendaftaran gagal, silahkan daftar kembali :)</string>
 </resources>
