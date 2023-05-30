@@ -25,7 +25,7 @@ class RegisterViewModel: ViewModel() {
             ) {
                 if (response.isSuccessful){
                     val responseBody = response.body()
-                    Log.d("MainActivity", responseBody?.message.toString())
+                    Log.d("RegisterActivity", responseBody?.message.toString())
                     _status.value = true
                 }else{
                     _status.value = false
@@ -36,7 +36,7 @@ class RegisterViewModel: ViewModel() {
 
             override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
                 _status.value = false
-                Log.e("MainActivity", "onFailure: ${t.message}")
+                Log.e("RegisterActivity", "onFailure: ${t.message}")
             }
         })
     }

@@ -1,7 +1,66 @@
 package com.capstone.arahku.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.util.Log
+import androidx.lifecycle.*
+import com.capstone.arahku.api.ApiConfig
+import com.capstone.arahku.model.*
+import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class LoginViewModel: ViewModel() {
+class LoginViewModel(private val preference: UserPreference): ViewModel() {
+    private val _status = MutableLiveData<Boolean>()
+    val status: LiveData<Boolean> = _status
 
+    private fun saveToken(token: String){
+        viewModelScope.launch {
+            preference.saveToken(token)
+        }
+    }
+
+    fun isLogin() = viewModelScope.launch {
+        preference.isLogin()
+    }
+
+    fun getState(): LiveData<Boolean> {
+        return preference.getState().asLiveData()
+    }
+
+    fun login(loginBody: LoginBody){
+        val client = ApiConfig.getApiService().login(loginBody)
+        client.enqueue(object : Callback<LoginResponse>{
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                if (response.isSuccessful){
+                    val responseBody = response.body()
+                    saveToken(responseBody?.data?.accessToken.toString())
+                    _status.value = true
+                    Log.d("LoginActivity", responseBody?.message.toString())
+                }else{
+                    _status.value = false
+                    Log.e("LoginActivity", "onFailure: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                _status.value = false
+                Log.e("LoginActivity", "onFailure: ${t.message}")
+            }
+        })
+    }
+}
+
+class ViewModelFactory(private val pref: UserPreference): ViewModelProvider.NewInstanceFactory(){
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        return when{
+            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
+                LoginViewModel(pref) as T
+            }
+            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
+                ProfileViewModel(pref) as T
+            }
+            else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
+        }
+    }
 }

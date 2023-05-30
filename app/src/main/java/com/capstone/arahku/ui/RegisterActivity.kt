@@ -27,16 +27,15 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-
-        setViewModel()
-        setRegister()
+        viewModelSetup()
+        registerSetup()
     }
 
-    private fun setViewModel(){
+    private fun viewModelSetup(){
         registerViewModel = ViewModelProvider(this@RegisterActivity)[RegisterViewModel::class.java]
     }
 
-    private fun setRegister(){
+    private fun registerSetup(){
         binding.btnRegister.setOnClickListener {
             val name = binding.edRegisterName.text.toString()
             val email = binding.edRegisterEmail.text.toString()
