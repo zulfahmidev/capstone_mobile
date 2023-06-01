@@ -20,4 +20,22 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="TextContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextContent.Small">
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="MenuContent">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/primary_color</item>
+    </style>
+
 </resources>

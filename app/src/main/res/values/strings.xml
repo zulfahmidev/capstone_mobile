@@ -22,8 +22,8 @@
     <string name="hint_address">Alamat</string>
     <string name="tv_have_an_account">Sudah memiliki akun?</string>
     <string name="tv_login_here">Masuk di sini</string>
-    <string name="tv_hello_user">Hello User,</string>
-    <string name="tv_greeting">Good Morning</string>
+    <string name="tv_welcome">Welcome Back,</string>
+    <string name="tv_user">User Arahku</string>
     <string name="tv_quotes">“Talent is nothing without dedication and discipline,and dedication and discipline is a talent in itself” - Luke Campbell</string>
     <string name="tv_home_question">Sudah berjodoh dengan jurusan impian?</string>
     <string name="txt_button_sudah">Sudah</string>
@@ -32,8 +32,7 @@
     <string name="title_home">Home</string>
     <string name="title_profile">Profil</string>
     <string name="title_chat">Pesan</string>
-    <string name="title_info_jurusan">Info Jurusan</string>
-    <string name="title_friend">Teman</string>
+    <string name="title_notification">Notification</string>
     <string name="tv_tes">Tes</string>
     <string name="minat_bakat">Minat Bakat</string>
     <string name="otak_kanan_otak_kiri"><![CDATA[Otak Kanan & Otak Kiri]]></string>
@@ -41,4 +40,13 @@
     <string name="empty_field_error">Tolong isi Field yang kosong</string>
     <string name="register_success_message">Pendaftaran berhasil, silahkan tunggu email verifikasi :)</string>
     <string name="register_failure_message">Pendaftaran gagal, silahkan daftar kembali :)</string>
+    <string name="cd_calendar">Calendar</string>
+    <string name="tv_home_slogan_1">Salam pengetahuan\nBagi kita semua</string>
+    <string name="tv_home_slogan_2">Sudahkah anda\nmenentukan jurusan\nmasa depan?</string>
+    <string name="tes">Tes</string>
+    <string name="jurusan">Jurusan</string>
+    <string name="kating">Kating</string>
+    <string name="blog_kating">Blog Kating</string>
+    <string name="universitas">Universitas</string>
+    <string name="teman_dekat">Teman Dekat</string>
 </resources>

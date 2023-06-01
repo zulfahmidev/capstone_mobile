@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +11,9 @@
         android:id="@+id/home_banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondary_color"
         android:orientation="horizontal"
-        android:padding="32dp"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/person"
-            app:civ_border_color="@color/primary_color"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_color="@color/secondary_color"
             app:civ_border_width="3dp" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -36,194 +36,213 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="@string/tv_hello_user"
-                android:textColor="@color/primary_color"
+                android:text="@string/tv_welcome"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tv_greeting"
-                android:textColor="@color/primary_color"
-                android:textSize="19sp" />
+                android:text="@string/tv_user"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <ImageView
+        <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginStart="64dp"
-            android:src="@drawable/calendar"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="12dp"
-            android:src="@drawable/notification"
-            tools:ignore="ContentDescription" />
+            android:layout_marginStart="96dp"
+            android:backgroundTint="@color/primary_color"
+            android:src="@drawable/ic_date"
+            android:contentDescription="@string/cd_calendar" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <TextView
-        android:id="@+id/tv_quotes"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/home_banner"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="@string/tv_quotes"
-        android:textSize="17sp"
-        android:textStyle="italic" />
+        android:layout_marginStart="25dp"
+        android:text="@string/tv_home_slogan_1"
+        android:textColor="@color/secondary_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_banner_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_banner_1" />
 
-    <View
-        android:id="@+id/view_line"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/light_gray"
-        android:visibility="visible"
-        android:layout_below="@id/tv_quotes" />
+    <ImageView
+        android:id="@+id/iv_banner_1"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/banner_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_banner"
+        tools:ignore="ContentDescription" />
 
-    <GridLayout
-        android:id="@+id/grid_layout"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/iv_banner_2"
+        android:layout_width="135dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="25dp"
+        android:src="@drawable/banner_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_banner_1"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/view_line"
-        android:layout_marginTop="10dp"
-        android:columnCount="1"
-        android:rowCount="3">
+        android:layout_marginStart="23dp"
+        android:textSize="20sp"
+        android:textColor="@color/secondary_color"
+        android:textStyle="bold"
+        android:text="@string/tv_home_slogan_2"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_banner_2"
+        app:layout_constraintStart_toEndOf="@+id/iv_banner_2"
+        app:layout_constraintTop_toTopOf="@+id/iv_banner_2" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="12dp"
-            android:backgroundTint="@color/secondary_color"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="12dp">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="365dp" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/secondary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_guideline">
 
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/iv_minat_bakat"
-                    android:layout_width="260dp"
-                    android:layout_height="90dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="16dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/minat_bakat"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:riv_border_color="@color/primary_color"
-                    app:riv_border_width="2dp"
-                    app:riv_corner_radius_top_left="8dp"
-                    app:riv_corner_radius_top_right="8dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tv_tes_mb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/tv_tes"
-                    android:textColor="@color/primary_color"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_minat_bakat" />
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ib_menu_1"
+                style="@style/MenuContent"
+                android:src="@drawable/tes"
+                app:riv_corner_radius="6dp"
+                app:riv_mutate_background="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"/>
 
-                <TextView
-                    android:id="@+id/tv_minat_bakat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/minat_bakat"
-                    android:textColor="@color/primary_color"
-                    android:textSize="19sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_tes_mb" />
+            <TextView
+                style="@style/TextContent.Small"
+                android:text="@string/tes"
+                app:layout_constraintEnd_toEndOf="@+id/ib_menu_1"
+                app:layout_constraintStart_toStartOf="@+id/ib_menu_1"
+                app:layout_constraintTop_toBottomOf="@+id/ib_menu_1" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ib_menu_2"
+                style="@style/MenuContent"
+                android:src="@drawable/img_jurusan"
+                app:riv_corner_radius="6dp"
+                app:riv_mutate_background="true"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/ib_menu_1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
-        </androidx.cardview.widget.CardView>
+            <TextView
+                style="@style/TextContent.Small"
+                android:text="@string/jurusan"
+                app:layout_constraintEnd_toEndOf="@+id/ib_menu_2"
+                app:layout_constraintStart_toStartOf="@+id/ib_menu_2"
+                app:layout_constraintTop_toBottomOf="@+id/ib_menu_2" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="12dp"
-            android:backgroundTint="@color/secondary_color"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="12dp">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ib_menu_3"
+                style="@style/MenuContent"
+                android:src="@drawable/img_kating"
+                app:riv_corner_radius="6dp"
+                app:riv_mutate_background="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                style="@style/TextContent.Small"
+                android:text="@string/kating"
+                app:layout_constraintEnd_toEndOf="@+id/ib_menu_3"
+                app:layout_constraintStart_toStartOf="@+id/ib_menu_3"
+                app:layout_constraintTop_toBottomOf="@+id/ib_menu_3" />
 
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/iv_kelayakan_jurusan"
-                    android:layout_width="260dp"
-                    android:layout_height="90dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="16dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/kelayakan_jurusan"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:riv_border_color="@color/primary_color"
-                    app:riv_border_width="2dp"
-                    app:riv_corner_radius_top_left="8dp"
-                    app:riv_corner_radius_top_right="8dp" />
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ib_menu_4"
+                style="@style/MenuContent"
+                android:src="@drawable/img_blog"
+                app:riv_corner_radius="6dp"
+                app:riv_mutate_background="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
 
-                <TextView
-                    android:id="@+id/tv_tes_kj"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/tv_tes"
-                    android:textColor="@color/primary_color"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_kelayakan_jurusan" />
+            <TextView
+                style="@style/TextContent.Small"
+                android:text="@string/blog_kating"
+                app:layout_constraintEnd_toEndOf="@+id/ib_menu_4"
+                app:layout_constraintStart_toStartOf="@+id/ib_menu_4"
+                app:layout_constraintTop_toBottomOf="@+id/ib_menu_4" />
 
-                <TextView
-                    android:id="@+id/tv_kelayakan_jurusan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/kelayakan_jurusan"
-                    android:textColor="@color/primary_color"
-                    android:textSize="19sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_tes_kj" />
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ib_menu_5"
+                style="@style/MenuContent"
+                android:src="@drawable/img_universitas"
+                app:riv_corner_radius="6dp"
+                app:riv_mutate_background="true"
+                android:layout_marginStart="64dp"
+                android:layout_marginBottom="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
+                tools:ignore="ContentDescription" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                style="@style/TextContent.Small"
+                android:text="@string/universitas"
+                app:layout_constraintEnd_toEndOf="@+id/ib_menu_5"
+                app:layout_constraintStart_toStartOf="@+id/ib_menu_5"
+                app:layout_constraintTop_toBottomOf="@+id/ib_menu_5" />
 
-        </androidx.cardview.widget.CardView>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ib_menu_6"
+                style="@style/MenuContent"
+                android:src="@drawable/img_teman_dekat"
+                app:riv_corner_radius="6dp"
+                app:riv_mutate_background="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="ContentDescription" />
 
-    </GridLayout>
+            <TextView
+                style="@style/TextContent.Small"
+                android:text="@string/teman_dekat"
+                app:layout_constraintEnd_toEndOf="@+id/ib_menu_6"
+                app:layout_constraintStart_toStartOf="@+id/ib_menu_6"
+                app:layout_constraintTop_toBottomOf="@+id/ib_menu_6" />
 
-</RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

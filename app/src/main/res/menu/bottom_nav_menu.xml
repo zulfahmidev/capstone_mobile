@@ -7,23 +7,19 @@
         android:title="@string/title_home" />
 
     <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/title_notification" />
+
+    <item
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_chat"
         android:title="@string/title_chat" />
 
-    <item
-        android:id="@+id/navigation_info_jurusan"
-        android:icon="@drawable/ic_info_jurusan"
-        android:title="@string/title_info_jurusan" />
-
-    <item
-        android:id="@+id/navigation_teman"
-        android:icon="@drawable/ic_friends"
-        android:title="@string/title_friend" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_person"
+        android:icon="@drawable/ic_profile"
         android:title="@string/title_profile"/>
 
 </menu>
