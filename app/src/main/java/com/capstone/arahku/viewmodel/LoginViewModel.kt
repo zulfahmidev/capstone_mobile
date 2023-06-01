@@ -13,6 +13,9 @@ class LoginViewModel(private val preference: UserPreference): ViewModel() {
     private val _status = MutableLiveData<Boolean>()
     val status: LiveData<Boolean> = _status
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
+
     private fun saveToken(token: String){
         viewModelScope.launch {
             preference.saveToken(token)
@@ -28,9 +31,11 @@ class LoginViewModel(private val preference: UserPreference): ViewModel() {
     }
 
     fun login(loginBody: LoginBody){
+        _isLoading.value = true
         val client = ApiConfig.getApiService().login(loginBody)
         client.enqueue(object : Callback<LoginResponse>{
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                _isLoading.value = false
                 if (response.isSuccessful){
                     val responseBody = response.body()
                     saveToken(responseBody?.data?.accessToken.toString())
@@ -43,6 +48,7 @@ class LoginViewModel(private val preference: UserPreference): ViewModel() {
             }
 
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                _isLoading.value = false
                 _status.value = false
                 Log.e("LoginActivity", "onFailure: ${t.message}")
             }

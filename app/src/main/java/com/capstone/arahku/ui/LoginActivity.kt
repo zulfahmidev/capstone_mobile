@@ -2,6 +2,7 @@ package com.capstone.arahku.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -75,6 +76,13 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this@LoginActivity, "Login Gagal, silahkan coba lagi", Toast.LENGTH_SHORT).show()
             }
         }
+        loginViewModel.isLoading.observe(this@LoginActivity){isLoading ->
+            showLoading(isLoading)
+        }
+    }
+
+    private fun showLoading(isLoading: Boolean){
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
 }

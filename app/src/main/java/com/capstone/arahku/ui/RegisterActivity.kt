@@ -2,7 +2,8 @@ package com.capstone.arahku.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.arahku.R
@@ -73,21 +74,39 @@ class RegisterActivity : AppCompatActivity() {
                 }
                 else -> {
                     registerViewModel.register(body)
+
                 }
             }
         }
 
         registerViewModel.status.observe(this@RegisterActivity){success ->
+            val builder = AlertDialog.Builder(this@RegisterActivity)
             if (success){
-                Toast.makeText(this@RegisterActivity, getString(R.string.register_success_message), Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@RegisterActivity, LandingPageActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intent)
-                finish()
+                builder.setIcon(R.drawable.notification)
+                    .setTitle("Pendaftaran Berhasil!")
+                    .setMessage(R.string.register_success_message)
+                    .setPositiveButton("Ya"){_, _ ->
+                        startActivity(Intent(this@RegisterActivity, LandingPageActivity::class.java))
+                        finish()
+                    }
+                    .show()
             }else{
-                Toast.makeText(this@RegisterActivity, getString(R.string.register_failure_message)
-                    , Toast.LENGTH_SHORT).show()
+                builder.setIcon(R.drawable.notification)
+                    .setTitle("Pendaftaran Gagal!")
+                    .setMessage(R.string.register_failure_message)
+                    .setNegativeButton("Ya", null)
+                    .show()
+                    .create()
             }
         }
+
+        registerViewModel.isLoading.observe(this@RegisterActivity){isLoading ->
+            showLoading(isLoading)
+        }
+    }
+
+
+    private fun showLoading(isLoading: Boolean){
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

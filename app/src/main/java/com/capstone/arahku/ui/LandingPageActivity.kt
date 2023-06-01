@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.capstone.arahku.MainActivity
 import com.capstone.arahku.databinding.ActivityLandingPageBinding
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
@@ -41,11 +40,11 @@ class LandingPageActivity : AppCompatActivity() {
         val pref = UserPreference.getInstance(dataStore)
         viewModel = ViewModelProvider(this, ViewModelFactory(pref))[LoginViewModel::class.java]
 
-        viewModel.getState().observe(this@LandingPageActivity){ isLogin ->
-            if (isLogin){
-                startActivity(Intent(this@LandingPageActivity, MainActivity::class.java))
-                finish()
-            }
-        }
+//        viewModel.getState().observe(this@LandingPageActivity){ isLogin ->
+//            if (isLogin){
+//                startActivity(Intent(this@LandingPageActivity, MainActivity::class.java))
+//                finish()
+//            }
+//        }
     }
 }
