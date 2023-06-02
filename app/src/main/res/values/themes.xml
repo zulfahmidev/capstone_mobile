@@ -20,6 +20,7 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <!-- Style untuk text content Fragment Home  -->
     <style name="TextContent">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -37,5 +38,19 @@
         <item name="android:layout_height">50dp</item>
         <item name="android:background">@color/primary_color</item>
     </style>
+
+    <!-- Style untuk text content Activity Tes -->
+    <style name="TextContentBanner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/accent_color_1</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
 
 </resources>

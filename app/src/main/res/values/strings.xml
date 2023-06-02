@@ -24,8 +24,6 @@
     <string name="tv_login_here">Masuk di sini</string>
     <string name="tv_welcome">Welcome Back,</string>
     <string name="tv_user">User Arahku</string>
-    <string name="tv_quotes">“Talent is nothing without dedication and discipline,and dedication and discipline is a talent in itself” - Luke Campbell</string>
-    <string name="tv_home_question">Sudah berjodoh dengan jurusan impian?</string>
     <string name="txt_button_sudah">Sudah</string>
     <string name="txt_button_ragu_ragu">Ragu-ragu</string>
     <string name="txt_button_belum">Belum</string>
@@ -43,10 +41,21 @@
     <string name="cd_calendar">Calendar</string>
     <string name="tv_home_slogan_1">Salam pengetahuan\nBagi kita semua</string>
     <string name="tv_home_slogan_2">Sudahkah anda\nmenentukan jurusan\nmasa depan?</string>
+    <string name="tv_slogan_banner">Panjang umur perjuangan, Panjang umur ilmu pengetahuan!</string>
     <string name="tes">Tes</string>
     <string name="jurusan">Jurusan</string>
     <string name="kating">Kating</string>
     <string name="blog_kating">Blog Kating</string>
     <string name="universitas">Universitas</string>
     <string name="teman_dekat">Teman Dekat</string>
+    <string name="slogan_menu_test">Panjang umur perjuangan, Panjang umur ilmu pengetahuan!</string>
+    <string name="name_test">Nama Tes</string>
+    <string name="description_test">Deskripsi Tes</string>
+    <string name="desc_test">Deskripsi Tes</string>
+    <string name="tentang_tes">Tentang Tes</string>
+    <string name="instruction_test">Instruksi Tes</string>
+    <string name="desc_instruction_test">Deskripsi Instruksi Tes</string>
+    <string name="search_hint">Mau cari jurusan apa nih?</string>
+    <string name="no_data">Tidak ada data</string>
+    <string name="mulai_tes">Mulai Tes</string>
 </resources>

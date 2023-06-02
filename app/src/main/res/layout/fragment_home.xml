@@ -54,7 +54,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginStart="128dp"
+            android:layout_marginStart="96dp"
             android:backgroundTint="@color/primary_color"
             android:src="@drawable/ic_date"
             android:contentDescription="@string/cd_calendar" />
@@ -149,16 +149,13 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_2"
                 style="@style/MenuContent"
-                android:layout_marginHorizontal="64dp"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="64dp"
                 android:src="@drawable/img_jurusan"
-                app:layout_constraintEnd_toStartOf="@+id/ib_menu_3"
-                app:layout_constraintStart_toEndOf="@+id/ib_menu_1"
-                app:layout_constraintTop_toTopOf="parent"
                 app:riv_corner_radius="6dp"
                 app:riv_mutate_background="true"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/ib_menu_1"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -209,15 +206,13 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_5"
                 style="@style/MenuContent"
-                android:layout_marginStart="64dp"
-                android:layout_marginEnd="64dp"
-                android:layout_marginBottom="35dp"
                 android:src="@drawable/img_universitas"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ib_menu_6"
-                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
                 app:riv_corner_radius="6dp"
                 app:riv_mutate_background="true"
+                android:layout_marginStart="64dp"
+                android:layout_marginBottom="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
                 tools:ignore="ContentDescription" />
 
             <TextView

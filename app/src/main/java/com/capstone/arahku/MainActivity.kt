@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 else -> true
             }
         }
-        viewModelSetup()
+//        viewModelSetup()
 
     }
 
