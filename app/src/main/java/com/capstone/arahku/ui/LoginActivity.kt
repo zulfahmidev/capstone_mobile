@@ -59,7 +59,6 @@ class LoginActivity : AppCompatActivity() {
                 else -> {
                     loginViewModel.apply {
                         login(loginBody)
-                        isLogin()
                     }
                 }
             }
