@@ -6,11 +6,21 @@ import com.capstone.arahku.databinding.ActivityDetailTestBinding
 
 class DetailTestActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDetailTestBinding
+    private var binding: ActivityDetailTestBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailTestBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding?.root)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = ""
+
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
+
 }

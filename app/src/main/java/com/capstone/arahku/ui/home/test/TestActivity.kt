@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.arahku.adapter.MenuTestAdapter
 import com.capstone.arahku.databinding.ActivityTestBinding
-import com.capstone.arahku.model.source.DataSourceMenuTest
+import com.capstone.arahku.model.source.DummyDataSource
 
 class TestActivity : AppCompatActivity() {
 
@@ -18,15 +18,19 @@ class TestActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Tes"
 
-        val adapter = MenuTestAdapter(DataSourceMenuTest.menuTestList)
+        initAdapter()
 
+    }
+
+
+    private fun initAdapter() {
+        val adapter = MenuTestAdapter(DummyDataSource.menuTestList)
         binding?.apply {
             rvMenuTest.adapter = adapter
             rvMenuTest.layoutManager = LinearLayoutManager(this@TestActivity)
         }
-
-
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
