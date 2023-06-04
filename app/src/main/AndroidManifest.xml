@@ -24,18 +24,23 @@
             android:exported="false" />
         <activity
             android:name=".ui.LandingPageActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.home.test.TestActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

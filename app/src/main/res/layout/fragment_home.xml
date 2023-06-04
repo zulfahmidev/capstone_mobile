@@ -20,11 +20,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/home_profile_img"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/ic_launcher_background"
             app:civ_border_color="@color/secondary_color"
-            app:civ_border_width="3dp" />
+            app:civ_border_width="3dp"
+            tools:src="@drawable/logo"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
@@ -41,12 +42,14 @@
                 android:textSize="15sp" />
 
             <TextView
+                android:id="@+id/home_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tv_user"
+                android:text=""
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:text="@string/tv_user"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -149,13 +152,15 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_2"
                 style="@style/MenuContent"
-                android:src="@drawable/img_jurusan"
-                app:riv_corner_radius="6dp"
-                app:riv_mutate_background="true"
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="64dp"
+                android:src="@drawable/img_jurusan"
+                app:layout_constraintEnd_toStartOf="@+id/ib_menu_3"
                 app:layout_constraintStart_toEndOf="@+id/ib_menu_1"
                 app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="6dp"
+                app:riv_mutate_background="true"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -206,13 +211,15 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_5"
                 style="@style/MenuContent"
+                android:layout_marginStart="64dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="35dp"
                 android:src="@drawable/img_universitas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ib_menu_6"
+                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
                 app:riv_corner_radius="6dp"
                 app:riv_mutate_background="true"
-                android:layout_marginStart="64dp"
-                android:layout_marginBottom="35dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
                 tools:ignore="ContentDescription" />
 
             <TextView

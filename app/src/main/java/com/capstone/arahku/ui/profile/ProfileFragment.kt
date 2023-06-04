@@ -1,22 +1,20 @@
 package com.capstone.arahku.ui.profile
 
-import android.content.DialogInterface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.AlertDialogLayout
-import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.FragmentProfileBinding
+import com.capstone.arahku.model.AccountData
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
 import com.capstone.arahku.viewmodel.ProfileViewModel
 import com.capstone.arahku.viewmodel.ViewModelFactory
-import java.nio.file.attribute.AclEntry
 
 class ProfileFragment : Fragment() {
 
@@ -46,6 +44,18 @@ class ProfileFragment : Fragment() {
         val pref = UserPreference.getInstance(requireContext().dataStore)
         profileViewModel = ViewModelProvider(this, ViewModelFactory(pref))[ProfileViewModel::class.java]
 
+        profileViewModel.apply {
+            token().observe(viewLifecycleOwner){token ->
+
+                val bearer = getString(R.string.Bearer)
+                getAccount(bearer + token)
+            }
+
+            account.observe(viewLifecycleOwner){account ->
+                setData(account)
+            }
+        }
+
         binding?.btnProfileLogout?.setOnClickListener {
             AlertDialog.Builder(requireActivity()).apply {
                 setIcon(R.drawable.ic_exit)
@@ -58,6 +68,22 @@ class ProfileFragment : Fragment() {
                 show()
             }
         }
+    }
 
+    private fun setData(accountData: AccountData?){
+        binding?.apply {
+            Glide.with(profileImg.context)
+                .load(accountData?.picture)
+                .placeholder(R.drawable.logo)
+                .into(profileImg)
+
+            profileName.text = accountData?.name
+            profileEmail.text = accountData?.email
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -38,6 +38,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             preference[STATE_KEY] ?: false
         }
     }
+
     fun getToken(): Flow<String> {
         return dataStore.data.map { preference ->
             preference[TOKEN_KEY] ?: ""

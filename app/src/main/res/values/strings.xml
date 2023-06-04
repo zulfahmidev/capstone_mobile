@@ -58,4 +58,5 @@
     <string name="search_hint">Mau cari jurusan apa nih?</string>
     <string name="no_data">Tidak ada data</string>
     <string name="mulai_tes">Mulai Tes</string>
+    <string name="Bearer">"Bearer "</string>
 </resources>
