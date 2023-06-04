@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.capstone.arahku.databinding.ItemMenuTestBinding
 import com.capstone.arahku.model.source.MenuTest
 
-class MenuTestAdapter(private val menuTestList: List<MenuTest>) : RecyclerView.Adapter<MenuTestAdapter.ViewHolder>() {
+class MenuTestAdapter(private val menuTestList: List<MenuTest>) :
+    RecyclerView.Adapter<MenuTestAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(

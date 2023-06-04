@@ -58,4 +58,8 @@
     <string name="search_hint">Mau cari jurusan apa nih?</string>
     <string name="no_data">Tidak ada data</string>
     <string name="mulai_tes">Mulai Tes</string>
+    <string name="nama_user_chat">Nama User</string>
+    <string name="teks_chat">Teks Chat</string>
+    <string name="time">Time</string>
+    <string name="hint_chat">Cari Pesan</string>
 </resources>
