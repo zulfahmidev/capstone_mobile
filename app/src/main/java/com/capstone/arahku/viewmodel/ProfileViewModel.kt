@@ -3,8 +3,8 @@ package com.capstone.arahku.viewmodel
 import android.util.Log
 import androidx.lifecycle.*
 import com.capstone.arahku.api.ApiConfig
-import com.capstone.arahku.model.AccountData
-import com.capstone.arahku.model.AccountResponse
+import com.capstone.arahku.model.response.AccountData
+import com.capstone.arahku.model.response.AccountResponse
 import com.capstone.arahku.model.UserPreference
 import kotlinx.coroutines.launch
 import retrofit2.Call

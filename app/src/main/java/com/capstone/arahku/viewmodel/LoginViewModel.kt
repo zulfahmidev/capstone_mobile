@@ -4,6 +4,8 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.capstone.arahku.api.ApiConfig
 import com.capstone.arahku.model.*
+import com.capstone.arahku.model.response.LoginBody
+import com.capstone.arahku.model.response.LoginResponse
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback

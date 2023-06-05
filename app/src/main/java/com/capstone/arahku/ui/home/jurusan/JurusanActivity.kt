@@ -14,7 +14,6 @@ class JurusanActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Jurusan"
 
-
     }
 
     override fun onDestroy() {

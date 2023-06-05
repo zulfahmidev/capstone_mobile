@@ -1,4 +1,4 @@
-package com.capstone.arahku.model
+package com.capstone.arahku.model.response
 
 import com.google.gson.annotations.SerializedName
 

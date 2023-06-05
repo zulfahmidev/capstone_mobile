@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.FragmentProfileBinding
-import com.capstone.arahku.model.AccountData
+import com.capstone.arahku.model.response.AccountData
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
 import com.capstone.arahku.viewmodel.ProfileViewModel

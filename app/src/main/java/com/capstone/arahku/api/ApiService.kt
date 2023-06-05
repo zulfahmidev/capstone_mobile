@@ -1,6 +1,7 @@
 package com.capstone.arahku.api
 
 import com.capstone.arahku.model.*
+import com.capstone.arahku.model.response.*
 import retrofit2.Call
 import retrofit2.http.*
 

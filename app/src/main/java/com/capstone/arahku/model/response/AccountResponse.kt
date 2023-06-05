@@ -1,16 +1,16 @@
-package com.capstone.arahku.model
+package com.capstone.arahku.model.response
 
 import com.google.gson.annotations.SerializedName
 
 data class AccountResponse(
 
-	@field:SerializedName("data")
+    @field:SerializedName("data")
 	val data: AccountData? = null,
 
-	@field:SerializedName("message")
+    @field:SerializedName("message")
 	val message: String? = null,
 
-	@field:SerializedName("status")
+    @field:SerializedName("status")
 	val status: Boolean? = null
 )
 
