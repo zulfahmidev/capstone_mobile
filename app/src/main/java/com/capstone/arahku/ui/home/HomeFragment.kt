@@ -14,7 +14,7 @@ import com.capstone.arahku.databinding.FragmentHomeBinding
 import com.capstone.arahku.model.response.AccountData
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
-import com.capstone.arahku.ui.home.jurusan.JurusanActivity
+import com.capstone.arahku.ui.home.jurusan.MajorActivity
 import com.capstone.arahku.ui.home.test.TestActivity
 import com.capstone.arahku.viewmodel.ProfileViewModel
 import com.capstone.arahku.viewmodel.ViewModelFactory
@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
             }
             ibMenu2.setOnClickListener {
                 requireActivity().run {
-                    startActivity(Intent(this, JurusanActivity::class.java))
+                    startActivity(Intent(this, MajorActivity::class.java))
                 }
             }
             ibMenu3.setOnClickListener {

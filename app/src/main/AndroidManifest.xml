@@ -21,6 +21,10 @@
             android:name=".ui.home.test.TestQuestionsActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.home.test.DetailTestActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.home.test.TestActivity"/>
+        <activity
             android:name=".ui.RegisterActivity"
             android:exported="false" />
         <activity
@@ -37,7 +41,7 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".ui.home.jurusan.JurusanActivity"
+            android:name=".ui.home.jurusan.MajorActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

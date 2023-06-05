@@ -3,6 +3,7 @@ package com.capstone.arahku.ui.home.test
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.arahku.databinding.ActivityDetailTestBinding
+import com.capstone.arahku.model.source.MenuTest
 
 class DetailTestActivity : AppCompatActivity() {
 
@@ -14,8 +15,19 @@ class DetailTestActivity : AppCompatActivity() {
         setContentView(binding?.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = ""
+        supportActionBar?.title = "Detail Tes"
 
+        val menuTest = intent.getSerializableExtra("menuTest") as? MenuTest
+        menuTest?.let { showDetailTest(it) }
+
+    }
+
+    private fun showDetailTest(menuTest: MenuTest) {
+        binding?.apply {
+            tvDetailTest.text = menuTest.description
+            tvDescriptionTest.text = menuTest.instruction
+            ivDetailTest.setImageResource(menuTest.photo)
+        }
     }
 
     override fun onDestroy() {

@@ -58,18 +58,3 @@ class LoginViewModel(private val preference: UserPreference): ViewModel() {
         })
     }
 }
-
-class ViewModelFactory(private val pref: UserPreference): ViewModelProvider.NewInstanceFactory(){
-    @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return when{
-            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
-                LoginViewModel(pref) as T
-            }
-            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
-                ProfileViewModel(pref) as T
-            }
-            else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
-        }
-    }
-}

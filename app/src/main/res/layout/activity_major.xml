@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".ui.home.jurusan.JurusanActivity">
+    tools:context=".ui.home.jurusan.MajorActivity">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
@@ -22,12 +22,12 @@
         app:showDividers="end" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_jurusan"
+        android:id="@+id/rv_major"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginVertical="16dp"
         android:layout_marginHorizontal="10dp"
-        tools:listitem="@layout/item_jurusan"
+        tools:listitem="@layout/item_major"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

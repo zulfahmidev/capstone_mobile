@@ -12,9 +12,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ProfileViewModel(private val preference: UserPreference): ViewModel() {
+
     private val _account = MutableLiveData<AccountData?>()
     val account : LiveData<AccountData?> = _account
-
 
     fun logout() = viewModelScope.launch {
         preference.logout()
