@@ -25,7 +25,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             app:civ_border_color="@color/secondary_color"
-            app:civ_border_width="3dp"
+            app:civ_border_width="1.5dp"
             tools:src="@drawable/logo"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -58,7 +58,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginStart="96dp"
+            android:layout_marginStart="110dp"
             android:backgroundTint="@color/transparent"
             android:src="@drawable/ic_date"
             android:contentDescription="@string/cd_calendar" />

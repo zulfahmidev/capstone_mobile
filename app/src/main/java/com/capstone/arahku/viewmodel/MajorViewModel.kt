@@ -5,15 +5,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.capstone.arahku.api.ApiConfig
-import com.capstone.arahku.model.UserPreference
-import com.capstone.arahku.model.response.MajorBody
 import com.capstone.arahku.model.response.MajorData
 import com.capstone.arahku.model.response.MajorResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MajorViewModel(private val preference: UserPreference): ViewModel() {
+class MajorViewModel(): ViewModel() {
 
     private val _listMajor = MutableLiveData<MajorData?>()
     val listMajor: LiveData<MajorData?> = _listMajor
@@ -24,9 +22,9 @@ class MajorViewModel(private val preference: UserPreference): ViewModel() {
     private val _status = MutableLiveData<String>()
     val status: LiveData<String> = _status
 
-    fun getMajor(majorBody: MajorBody) {
+    internal fun getMajor(data: MajorData) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().major(majorBody)
+        val client = ApiConfig.getApiService().major(data)
         client.enqueue(object : Callback<MajorResponse> {
             override fun onResponse(call: Call<MajorResponse>, response: Response<MajorResponse>) {
                 _isLoading.value = false

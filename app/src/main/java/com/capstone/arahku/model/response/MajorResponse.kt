@@ -29,8 +29,3 @@ data class MajorData(
     val name: String? = null
 )
 
-data class MajorBody(
-
-    @field:SerializedName("search")
-    val search_key: String? = null
-)

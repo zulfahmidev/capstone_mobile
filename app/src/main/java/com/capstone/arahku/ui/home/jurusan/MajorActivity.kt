@@ -52,6 +52,8 @@ class MajorActivity : AppCompatActivity() {
                 Toast.makeText(this, status.toString(), Toast.LENGTH_SHORT).show()
             }
         }
+
+        majorViewModel.getMajor(MajorData())
     }
 
     private fun setMajorData(listMajor: List<MajorData>) {

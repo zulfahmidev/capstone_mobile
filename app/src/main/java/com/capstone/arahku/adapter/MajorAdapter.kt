@@ -11,7 +11,6 @@ class MajorAdapter(private val listMajor: List<MajorData>) :
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             ItemMajorBinding.inflate(

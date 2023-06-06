@@ -16,7 +16,7 @@ interface ApiService {
 
     @Headers("Content-Type: application/json")
     @GET("major")
-    fun major(@Body body: MajorBody): Call<MajorResponse>
+    fun major(@Body body: MajorData): Call<MajorResponse>
 
     @GET("auth/me")
     fun account(@Header("Authorization") token: String): Call<AccountResponse>
