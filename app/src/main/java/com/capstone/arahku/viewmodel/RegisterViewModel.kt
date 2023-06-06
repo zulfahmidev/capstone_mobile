@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.capstone.arahku.api.ApiConfig
-import com.capstone.arahku.model.RegisterBody
-import com.capstone.arahku.model.RegisterResponse
+import com.capstone.arahku.model.response.RegisterBody
+import com.capstone.arahku.model.response.RegisterResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

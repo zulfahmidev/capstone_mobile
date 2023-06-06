@@ -3,8 +3,8 @@ package com.capstone.arahku.viewmodel
 import android.util.Log
 import androidx.lifecycle.*
 import com.capstone.arahku.api.ApiConfig
-import com.capstone.arahku.model.AccountData
-import com.capstone.arahku.model.AccountResponse
+import com.capstone.arahku.model.response.AccountData
+import com.capstone.arahku.model.response.AccountResponse
 import com.capstone.arahku.model.UserPreference
 import kotlinx.coroutines.launch
 import retrofit2.Call
@@ -12,9 +12,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ProfileViewModel(private val preference: UserPreference): ViewModel() {
+
     private val _account = MutableLiveData<AccountData?>()
     val account : LiveData<AccountData?> = _account
-
 
     fun logout() = viewModelScope.launch {
         preference.logout()

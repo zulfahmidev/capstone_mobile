@@ -4,6 +4,8 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.capstone.arahku.api.ApiConfig
 import com.capstone.arahku.model.*
+import com.capstone.arahku.model.response.LoginBody
+import com.capstone.arahku.model.response.LoginResponse
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -54,20 +56,5 @@ class LoginViewModel(private val preference: UserPreference): ViewModel() {
                 Log.e("LoginActivity", "onFailure: ${t.message}")
             }
         })
-    }
-}
-
-class ViewModelFactory(private val pref: UserPreference): ViewModelProvider.NewInstanceFactory(){
-    @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return when{
-            modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
-                LoginViewModel(pref) as T
-            }
-            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
-                ProfileViewModel(pref) as T
-            }
-            else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
-        }
     }
 }

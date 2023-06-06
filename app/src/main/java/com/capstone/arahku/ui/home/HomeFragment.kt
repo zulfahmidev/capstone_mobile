@@ -5,14 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.FragmentHomeBinding
-import com.capstone.arahku.model.AccountData
+import com.capstone.arahku.model.response.AccountData
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
+import com.capstone.arahku.ui.home.jurusan.MajorActivity
 import com.capstone.arahku.ui.home.test.TestActivity
 import com.capstone.arahku.viewmodel.ProfileViewModel
 import com.capstone.arahku.viewmodel.ViewModelFactory
@@ -35,15 +37,35 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupMenuAction()
+        viewModelSetup()
+    }
+
+    private fun setupMenuAction() {
         binding?.apply {
             ibMenu1.setOnClickListener {
                 requireActivity().run {
                     startActivity(Intent(this, TestActivity::class.java))
                 }
             }
+            ibMenu2.setOnClickListener {
+                requireActivity().run {
+                    startActivity(Intent(this, MajorActivity::class.java))
+                }
+            }
+            ibMenu3.setOnClickListener {
+                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+            }
+            ibMenu4.setOnClickListener {
+                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+            }
+            ibMenu5.setOnClickListener {
+                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+            }
+            ibMenu6.setOnClickListener {
+                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+            }
         }
-
-        viewModelSetup()
     }
 
     private fun viewModelSetup(){

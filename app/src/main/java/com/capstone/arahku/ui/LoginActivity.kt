@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.arahku.MainActivity
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.ActivityLoginBinding
-import com.capstone.arahku.model.LoginBody
+import com.capstone.arahku.model.response.LoginBody
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
 import com.capstone.arahku.viewmodel.LoginViewModel

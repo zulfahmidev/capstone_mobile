@@ -63,4 +63,7 @@
     <string name="time">Time</string>
     <string name="hint_chat">Cari Pesan</string>
     <string name="Bearer">"Bearer "</string>
+    <string name="user_name">nama</string>
+    <string name="nama_jurusan">Nama Jurusan</string>
+    <string name="logout">logout</string>
 </resources>

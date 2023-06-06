@@ -18,7 +18,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://dev.sepol.xyz:5000/")
+                .baseUrl("http://api.sepol.xyz:5000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

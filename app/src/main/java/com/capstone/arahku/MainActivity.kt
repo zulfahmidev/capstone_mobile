@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNav = binding.navView
         bottomNav.setOnItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 R.id.navigation_home -> {
                     loadFragment(HomeFragment())
                     true
@@ -56,18 +56,18 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun loadFragment(fragment: Fragment){
+    private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, fragment)
         transaction.commit()
     }
 
-    private fun viewModelSetup(){
+    private fun viewModelSetup() {
         val pref = UserPreference.getInstance(dataStore)
         viewModel = ViewModelProvider(this, ViewModelFactory(pref))[LoginViewModel::class.java]
 
-        viewModel.getState().observe(this@MainActivity){ isLogin ->
-            if (isLogin == false){
+        viewModel.getState().observe(this@MainActivity) { isLogin ->
+            if (isLogin == false) {
                 startActivity(Intent(this@MainActivity, LandingPageActivity::class.java))
                 finish()
             }
