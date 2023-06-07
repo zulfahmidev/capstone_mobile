@@ -10,9 +10,11 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/activity_splash_screen.xml" value="0.184375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/activity_test_questions.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/fragment_chat.xml" value="0.184375" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/fragment_home.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/fragment_profile.xml" value="0.184375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/layout/item_question.xml" value="0.17980072463768115" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Arahku/app/src/main/res/menu/bottom_nav_menu.xml" value="0.15520833333333334" />
       </map>
     </option>
@@ -22,12 +24,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>

@@ -16,4 +16,11 @@ interface ApiService {
 
     @GET("auth/me")
     fun account(@Header("Authorization") token: String): Call<AccountResponse>
+
+    @Headers("Content-Type: application/json")
+    @POST("form/response")
+    fun sendResponse(@Body body: SendResponse): Call<ReceiveResponse>
+
+    @GET("form/minat-bakat")
+    fun getForm(): Call<FormResponse>
 }

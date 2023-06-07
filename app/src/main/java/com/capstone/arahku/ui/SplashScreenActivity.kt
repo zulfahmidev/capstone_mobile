@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.capstone.arahku.MainActivity
 import com.capstone.arahku.R
 import com.capstone.arahku.model.UserPreference

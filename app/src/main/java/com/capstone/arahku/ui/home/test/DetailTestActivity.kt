@@ -1,5 +1,6 @@
 package com.capstone.arahku.ui.home.test
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.arahku.databinding.ActivityDetailTestBinding
@@ -19,6 +20,10 @@ class DetailTestActivity : AppCompatActivity() {
 
         val menuTest = intent.getSerializableExtra("menuTest") as? MenuTest
         menuTest?.let { showDetailTest(it) }
+
+        binding?.btnMulaiTes?.setOnClickListener {
+            startActivity(Intent(this@DetailTestActivity, TestQuestionsActivity::class.java))
+        }
 
     }
 
