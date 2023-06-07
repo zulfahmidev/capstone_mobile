@@ -25,7 +25,6 @@ class DetailTestActivity : AppCompatActivity() {
     private fun showDetailTest(menuTest: MenuTest) {
         binding?.apply {
             tvDetailTest.text = menuTest.description
-            tvDescriptionTest.text = menuTest.instruction
             ivDetailTest.setImageResource(menuTest.photo)
         }
     }

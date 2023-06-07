@@ -14,10 +14,6 @@ interface ApiService {
     @POST("auth/login")
     fun login(@Body body: LoginBody): Call<LoginResponse>
 
-    @Headers("Content-Type: application/json")
-    @GET("major")
-    fun major(@Body body: MajorData): Call<MajorResponse>
-
     @GET("auth/me")
     fun account(@Header("Authorization") token: String): Call<AccountResponse>
 }

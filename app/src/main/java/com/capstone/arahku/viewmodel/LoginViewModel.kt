@@ -12,6 +12,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginViewModel(private val preference: UserPreference): ViewModel() {
+
     private val _status = MutableLiveData<Boolean>()
     val status: LiveData<Boolean> = _status
 

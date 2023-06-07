@@ -1,4 +1,4 @@
-package com.capstone.arahku.ui
+package com.capstone.arahku.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.ActivityRegisterBinding
 import com.capstone.arahku.model.response.RegisterBody
+import com.capstone.arahku.ui.LandingPageActivity
 import com.capstone.arahku.viewmodel.RegisterViewModel
 
 class RegisterActivity : AppCompatActivity() {
