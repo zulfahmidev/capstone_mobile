@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.arahku.databinding.ActivityLandingPageBinding
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
+import com.capstone.arahku.ui.auth.LoginActivity
+import com.capstone.arahku.ui.auth.RegisterActivity
 import com.capstone.arahku.viewmodel.LoginViewModel
 import com.capstone.arahku.viewmodel.ViewModelFactory
 

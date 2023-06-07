@@ -25,10 +25,10 @@
             android:exported="false"
             android:parentActivityName=".ui.home.test.TestActivity"/>
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name=".ui.auth.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.auth.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".ui.LandingPageActivity"
