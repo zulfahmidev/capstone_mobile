@@ -30,6 +30,9 @@ class QuestionViewModel(private val preference: UserPreference): ViewModel() {
     private val _responseStatus = MutableLiveData<Boolean>()
     val responseStatus: LiveData<Boolean> = _responseStatus
 
+    private val _receivedResponse = MutableLiveData<ReceiveResponse>()
+    val receivedResponse : LiveData<ReceiveResponse> = _receivedResponse
+
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
@@ -68,6 +71,8 @@ class QuestionViewModel(private val preference: UserPreference): ViewModel() {
                 _isLoading.value = false
                if (response.isSuccessful){
                    _responseStatus.value = true
+                   _receivedResponse.value = response.body()
+
                }else{
                    _responseStatus.value = false
                    Log.e("Test", "onFailure: ${response.message()}")

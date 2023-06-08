@@ -34,7 +34,9 @@ data class OptionsItemForm(
     val id: Int? = null,
 
     @field:SerializedName("value")
-    val value: String? = null
+    val value: String? = null,
+
+    var isChecked: Boolean?
 )
 
 data class FormData(

@@ -18,12 +18,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.test.TestResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.test.TestQuestionsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.home.test.DetailTestActivity"
             android:exported="false"
-            android:parentActivityName=".ui.home.test.TestActivity"/>
+            android:parentActivityName=".ui.home.test.TestActivity" />
         <activity
             android:name=".ui.auth.RegisterActivity"
             android:exported="false" />

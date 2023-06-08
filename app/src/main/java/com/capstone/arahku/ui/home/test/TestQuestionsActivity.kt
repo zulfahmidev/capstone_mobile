@@ -1,7 +1,9 @@
 package com.capstone.arahku.ui.home.test
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -65,6 +67,22 @@ class TestQuestionsActivity : AppCompatActivity() {
                     getId().observe(this@TestQuestionsActivity){ userId ->
                         val body = SendResponse(userId, formId, responseItem)
                         sendResponse(body)
+                    }
+                }
+
+                receivedResponse.observe(this@TestQuestionsActivity){response ->
+                    val result = response.data?.result
+                    val user = response.data?.userId?.name
+
+                    responseStatus.observe(this@TestQuestionsActivity){success ->
+                        if (success){
+                            val intent = Intent(this@TestQuestionsActivity, TestResultActivity::class.java)
+                            intent.putExtra("result", result)
+                            intent.putExtra("username", user)
+                            startActivity(intent)
+                        }else{
+                            Toast.makeText(this@TestQuestionsActivity, "Gagal memuat hasil", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
             }

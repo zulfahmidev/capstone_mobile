@@ -1,7 +1,6 @@
 package com.capstone.arahku.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RadioButton
@@ -14,29 +13,25 @@ class QuestionAdapter(private val listQuestion: List<FieldsItemForm?>?) : Recycl
     class ViewHolder(private val context: Context, private val binding: ItemQuestionBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(fieldsItem: FieldsItemForm){
             binding.radioGroup.removeAllViews()
-            for (rbt in fieldsItem.options!!) {
-                val rb = RadioButton(context)
-                rb.text = rbt?.value
-                rb.id = rbt?.id!!
-                binding.radioGroup.addView(rb)
-
-                rb.setOnClickListener{
-                    rb.isChecked = fieldsItem.selectedOptionId == rb.id
-                }
-
-                rb.setOnCheckedChangeListener { buttonView, isChecked ->
+            for (options in fieldsItem.options!!) {
+                val radioButtons = RadioButton(context)
+                radioButtons.text = options?.value
+                radioButtons.id = options?.id!!
+                radioButtons.isChecked = options.isChecked == true
+                radioButtons.setOnCheckedChangeListener { buttonView, isChecked ->
                     if (isChecked) {
                         fieldsItem.selectedOptionId = buttonView.id
                     }
+                    options.isChecked = isChecked
                 }
+                binding.radioGroup.addView(radioButtons)
             }
 
             binding.apply {
                 tvQuestion.text = fieldsItem.label
-                tvQuestion.id = fieldsItem?.id!!
+                tvQuestion.id = fieldsItem.id!!
             }
-            print(binding.tvQuestion.id)
-            Log.d("Adapter", "question.id ${binding.tvQuestion.id}")
+
         }
     }
 

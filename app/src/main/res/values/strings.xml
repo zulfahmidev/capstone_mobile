@@ -66,4 +66,5 @@
     <string name="user_name">nama</string>
     <string name="nama_jurusan">Nama Jurusan</string>
     <string name="logout">logout</string>
+    <string name="result_text">Selamat %1$s, Berdasarkan minat dan bakat, kamu cocok pada jurusan ini!</string>
 </resources>
