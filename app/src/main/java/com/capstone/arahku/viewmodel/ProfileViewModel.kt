@@ -24,6 +24,10 @@ class ProfileViewModel(private val preference: UserPreference): ViewModel() {
         return preference.getToken().asLiveData()
     }
 
+    fun saveId(id: Int) = viewModelScope.launch {
+        preference.saveUserId(id)
+    }
+
     fun getAccount(token: String){
         val client = ApiConfig.getApiService().account(token)
         client.enqueue(object : Callback<AccountResponse>{
@@ -34,6 +38,10 @@ class ProfileViewModel(private val preference: UserPreference): ViewModel() {
                 if (response.isSuccessful){
                     val responseBody = response.body()
                     _account.value = responseBody?.data
+                    val id = responseBody?.data?.id
+                    if (id != null) {
+                        saveId(id)
+                    }
                 }else{
                     Log.e("Profile", "onFailure: ${response.message()}")
                 }

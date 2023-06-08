@@ -53,6 +53,11 @@ class ProfileFragment : Fragment() {
 
             account.observe(viewLifecycleOwner){account ->
                 setData(account)
+                val id = account?.id
+                val bundle = Bundle()
+                if (id != null) {
+                    bundle.putInt("id_key", id)
+                }
             }
         }
 

@@ -19,7 +19,6 @@ class QuestionAdapter(private val listQuestion: List<FieldsItemForm?>?) : Recycl
                 rb.text = rbt?.value
                 rb.id = rbt?.id!!
                 binding.radioGroup.addView(rb)
-                Log.d("adapter", "radioButton id: ${rb.id}")
 
                 rb.setOnClickListener{
                     rb.isChecked = fieldsItem.selectedOptionId == rb.id
