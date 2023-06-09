@@ -1,5 +1,6 @@
 package com.capstone.arahku.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import com.capstone.arahku.databinding.FragmentProfileBinding
 import com.capstone.arahku.model.response.AccountData
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
+import com.capstone.arahku.ui.LandingPageActivity
 import com.capstone.arahku.viewmodel.ProfileViewModel
 import com.capstone.arahku.viewmodel.ViewModelFactory
 
@@ -68,6 +70,8 @@ class ProfileFragment : Fragment() {
                 setMessage("Apakah kamu yakin ingin Logout dari akun ini?")
                 setPositiveButton("Ya"){_, _ ->
                     profileViewModel.logout()
+                    startActivity(Intent(requireContext(), LandingPageActivity::class.java))
+                    requireActivity().onBackPressed()
                 }
                 setNegativeButton("Tidak", null)
                 show()
@@ -79,7 +83,7 @@ class ProfileFragment : Fragment() {
         binding?.apply {
             Glide.with(profileImg.context)
                 .load(accountData?.picture)
-                .placeholder(R.drawable.logo)
+                .placeholder(R.drawable.img_profile)
                 .into(profileImg)
 
             profileName.text = accountData?.name

@@ -66,11 +66,11 @@ class MainActivity : AppCompatActivity() {
         val pref = UserPreference.getInstance(dataStore)
         viewModel = ViewModelProvider(this, ViewModelFactory(pref))[LoginViewModel::class.java]
 
-        viewModel.getState().observe(this@MainActivity) { isLogin ->
-            if (isLogin == false) {
-                startActivity(Intent(this@MainActivity, LandingPageActivity::class.java))
-                finish()
-            }
-        }
+//        viewModel.getState().observe(this@MainActivity) { isLogin ->
+//            if (isLogin == false) {
+//                startActivity(Intent(this@MainActivity, LandingPageActivity::class.java))
+//                finish()
+//            }
+//        }
     }
 }

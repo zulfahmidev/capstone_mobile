@@ -43,7 +43,6 @@ class LoginViewModel(private val preference: UserPreference): ViewModel() {
                     val responseBody = response.body()
                     saveToken(responseBody?.data?.accessToken.toString())
                     _status.value = true
-                    isLogin()
                     Log.d("LoginActivity", responseBody?.message.toString())
                 }else{
                     _status.value = false

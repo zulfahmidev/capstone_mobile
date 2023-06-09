@@ -26,7 +26,7 @@
             android:layout_height="60dp"
             app:civ_border_color="@color/secondary_color"
             app:civ_border_width="1.5dp"
-            tools:src="@drawable/logo"/>
+            android:src="@drawable/img_profile"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"

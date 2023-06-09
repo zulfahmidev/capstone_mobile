@@ -86,6 +86,7 @@ class HomeFragment : Fragment() {
         binding?.apply {
             Glide.with(homeProfileImg.context)
                 .load(accountData?.picture)
+                .placeholder(R.drawable.img_profile)
                 .into(homeProfileImg)
             homeUsername.text = accountData?.name
         }
