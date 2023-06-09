@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/landing_card"
         android:layout_width="0dp"
-        android:layout_height="450dp"
+        android:layout_height="400dp"
         android:layout_marginTop="-8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="fitXY"
             android:src="@drawable/landing_img"
             android:contentDescription="@string/cd_landing_image" />
 
@@ -27,8 +28,8 @@
             android:id="@+id/logo_arahku"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/logo"
             android:layout_gravity="center"
+            android:src="@drawable/logo"
             android:contentDescription="@string/cd_logo_arahku" />
     </androidx.cardview.widget.CardView>
 
@@ -63,45 +64,30 @@
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/accent_color_2"
         android:text="@string/txt_btn_register"
         android:textStyle="bold"
         app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/landing_btn_login" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/landing_btn_login"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
         android:backgroundTint="@color/accent_color_1"
         android:text="@string/txt_btn_login"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/landing_btn_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_moto" />
-
-    <TextView
-        android:id="@+id/landing_tv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="26dp"
-        android:text="@string/landing_description"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/landing_btn_register" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

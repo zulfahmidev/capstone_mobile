@@ -29,6 +29,8 @@ class TestQuestionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTestQuestionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
+
         viewModelSetup()
     }
 

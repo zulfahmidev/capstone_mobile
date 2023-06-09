@@ -66,16 +66,17 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_mulai_tes"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/accent_color_2"
+        android:backgroundTint="@color/accent_color_1"
         android:text="@string/mulai_tes"
         android:textAllCaps="false"
         android:textSize="17sp"
-        app:cornerRadius="10dp" />
+        android:textColor="@color/black"
+        app:cornerRadius="8dp" />
 
 
 

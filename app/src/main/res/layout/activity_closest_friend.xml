@@ -5,32 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".ui.home.major.MajorActivity">
+    tools:context=".ui.home.friend.ClosestFriendActivity">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/searchbar_shape"
-        app:iconifiedByDefault="false"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="330dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/img_teman_dekat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:queryBackground="@null"
-        app:queryHint="@string/search_hint"
-        app:showDividers="end" />
+        tools:ignore="ContentDescription" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_major"
+        android:id="@+id/rv_friends"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_major"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginVertical="16dp"
+        tools:listitem="@layout/item_friends"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_view" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

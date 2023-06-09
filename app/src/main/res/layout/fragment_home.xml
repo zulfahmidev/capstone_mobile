@@ -114,7 +114,7 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_1"
                 style="@style/MenuContent"
-                android:src="@drawable/tes"
+                android:src="@drawable/icon_tes"
                 app:riv_corner_radius="6dp"
                 app:riv_mutate_background="true"
                 android:layout_marginStart="25dp"
@@ -136,7 +136,7 @@
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="64dp"
-                android:src="@drawable/img_jurusan"
+                android:src="@drawable/icon_jurusan"
                 app:layout_constraintEnd_toStartOf="@+id/ib_menu_3"
                 app:layout_constraintStart_toEndOf="@+id/ib_menu_1"
                 app:layout_constraintTop_toTopOf="parent"
@@ -145,6 +145,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/textView"
                 style="@style/TextContent.Small"
                 android:text="@string/jurusan"
                 app:layout_constraintEnd_toEndOf="@+id/ib_menu_2"
@@ -154,7 +155,7 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_3"
                 style="@style/MenuContent"
-                android:src="@drawable/img_kating"
+                android:src="@drawable/icon_teman_dekat"
                 app:riv_corner_radius="6dp"
                 app:riv_mutate_background="true"
                 android:layout_marginTop="16dp"
@@ -165,7 +166,7 @@
 
             <TextView
                 style="@style/TextContent.Small"
-                android:text="@string/kating"
+                android:text="@string/teman_dekat"
                 app:layout_constraintEnd_toEndOf="@+id/ib_menu_3"
                 app:layout_constraintStart_toStartOf="@+id/ib_menu_3"
                 app:layout_constraintTop_toBottomOf="@+id/ib_menu_3" />
@@ -173,7 +174,7 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_4"
                 style="@style/MenuContent"
-                android:src="@drawable/img_blog"
+                android:src="@drawable/icon_kating"
                 app:riv_corner_radius="6dp"
                 app:riv_mutate_background="true"
                 android:layout_marginStart="25dp"
@@ -184,50 +185,10 @@
 
             <TextView
                 style="@style/TextContent.Small"
-                android:text="@string/blog_kating"
+                android:text="@string/kating"
                 app:layout_constraintEnd_toEndOf="@+id/ib_menu_4"
                 app:layout_constraintStart_toStartOf="@+id/ib_menu_4"
                 app:layout_constraintTop_toBottomOf="@+id/ib_menu_4" />
-
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/ib_menu_5"
-                style="@style/MenuContent"
-                android:layout_marginStart="64dp"
-                android:layout_marginEnd="64dp"
-                android:layout_marginBottom="35dp"
-                android:src="@drawable/img_universitas"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ib_menu_6"
-                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
-                app:riv_corner_radius="6dp"
-                app:riv_mutate_background="true"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                style="@style/TextContent.Small"
-                android:text="@string/universitas"
-                app:layout_constraintEnd_toEndOf="@+id/ib_menu_5"
-                app:layout_constraintStart_toStartOf="@+id/ib_menu_5"
-                app:layout_constraintTop_toBottomOf="@+id/ib_menu_5" />
-
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/ib_menu_6"
-                style="@style/MenuContent"
-                android:src="@drawable/img_teman_dekat"
-                app:riv_corner_radius="6dp"
-                app:riv_mutate_background="true"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="35dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                style="@style/TextContent.Small"
-                android:text="@string/teman_dekat"
-                app:layout_constraintEnd_toEndOf="@+id/ib_menu_6"
-                app:layout_constraintStart_toStartOf="@+id/ib_menu_6"
-                app:layout_constraintTop_toBottomOf="@+id/ib_menu_6" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
