@@ -18,6 +18,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.friend.ClosestFriendActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.major.DetailMajorActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.home.major.MajorActivity" />
+        <activity
             android:name=".ui.home.test.TestResultActivity"
             android:exported="false" />
         <activity
@@ -44,7 +51,7 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".ui.home.jurusan.MajorActivity"
+            android:name=".ui.home.major.MajorActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

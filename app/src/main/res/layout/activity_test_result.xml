@@ -4,30 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".ui.home.test.TestResultActivity">
 
-    <TextView
-        android:id="@+id/text_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="32dp"
+    <ImageView
+        android:id="@+id/iv_result"
+        android:layout_width="335dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Congratulations" />
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_result"
+        tools:text="Selamat, User Arahku" />
+
+    <TextView
+        android:id="@+id/tv_result_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="3dp"
+        android:textSize="17sp"
+        android:text="@string/result_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_result" />
 
     <TextView
         android:id="@+id/major_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:letterSpacing="0.05"
+        android:textColor="@color/secondary_color"
         android:textSize="24sp"
-        android:textStyle="italic"
-        android:layout_marginTop="32dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_result"
-        tools:text="jurusan" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_desc"
+        app:layout_constraintVertical_bias="0.405"
+        tools:text="Jurusan" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:backgroundTint="@color/accent_color_2"
+        android:text="@string/selengkapnya"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kembali"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_kembali"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/kembali"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/accent_color_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

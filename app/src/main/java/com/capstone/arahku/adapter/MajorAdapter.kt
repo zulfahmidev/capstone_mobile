@@ -3,18 +3,16 @@ package com.capstone.arahku.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.capstone.arahku.databinding.ItemMenuTestBinding
-import com.capstone.arahku.model.source.MenuTest
+import com.capstone.arahku.databinding.ItemMajorBinding
+import com.capstone.arahku.model.source.Major
 
-class MenuTestAdapter(
-    private val menuTestList: List<MenuTest>) :
-    RecyclerView.Adapter<MenuTestAdapter.ViewHolder>() {
+class MajorAdapter(private val majorList: List<Major>): RecyclerView.Adapter<MajorAdapter.ViewHolder>() {
 
     private var onItemClickListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            ItemMenuTestBinding.inflate(
+            ItemMajorBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -22,24 +20,22 @@ class MenuTestAdapter(
         )
     }
 
+    override fun getItemCount() = majorList.size
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val listMenuTest = menuTestList[position]
-        holder.bind(listMenuTest)
+        val listMajor = majorList[position]
+        holder.bind(listMajor)
 
         holder.itemView.setOnClickListener {
-            onItemClickListener?.onItemClick(listMenuTest)
+            onItemClickListener?.onItemClick(listMajor)
         }
     }
 
-    override fun getItemCount() = menuTestList.size
-
-    inner class ViewHolder(private val binding: ItemMenuTestBinding) :
+    inner class ViewHolder(private val binding: ItemMajorBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(menuTest: MenuTest) {
+        fun bind(major: Major) {
             with(binding) {
-                tvNameTest.text = menuTest.name
-                tvShortDescTest.text = menuTest.description
-                ivImgTest.setImageResource(menuTest.image)
+                tvMajor.text = major.name
             }
         }
     }
@@ -49,6 +45,6 @@ class MenuTestAdapter(
     }
 
     interface OnItemClickListener {
-        fun onItemClick(menuTest: MenuTest)
+        fun onItemClick(major: Major)
     }
 }

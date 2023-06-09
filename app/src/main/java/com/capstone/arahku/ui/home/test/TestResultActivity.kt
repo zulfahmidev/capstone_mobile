@@ -1,7 +1,7 @@
 package com.capstone.arahku.ui.home.test
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.ActivityTestResultBinding
 
@@ -13,6 +13,7 @@ class TestResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTestResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         val major = intent.getStringExtra("result")
         val user = intent.getStringExtra("username")

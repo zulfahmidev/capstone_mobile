@@ -14,7 +14,8 @@ import com.capstone.arahku.databinding.FragmentHomeBinding
 import com.capstone.arahku.model.response.AccountData
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
-import com.capstone.arahku.ui.home.jurusan.MajorActivity
+import com.capstone.arahku.ui.home.friend.ClosestFriendActivity
+import com.capstone.arahku.ui.home.major.MajorActivity
 import com.capstone.arahku.ui.home.test.TestActivity
 import com.capstone.arahku.viewmodel.ProfileViewModel
 import com.capstone.arahku.viewmodel.ViewModelFactory
@@ -54,15 +55,11 @@ class HomeFragment : Fragment() {
                 }
             }
             ibMenu3.setOnClickListener {
-                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+                requireActivity().run {
+                    startActivity(Intent(this, ClosestFriendActivity::class.java))
+                }
             }
             ibMenu4.setOnClickListener {
-                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
-            }
-            ibMenu5.setOnClickListener {
-                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
-            }
-            ibMenu6.setOnClickListener {
                 Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
             }
         }
