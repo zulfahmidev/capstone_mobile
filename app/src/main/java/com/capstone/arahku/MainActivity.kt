@@ -1,6 +1,5 @@
 package com.capstone.arahku
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -8,7 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.arahku.databinding.ActivityMainBinding
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
-import com.capstone.arahku.ui.LandingPageActivity
 import com.capstone.arahku.ui.chat.ChatFragment
 import com.capstone.arahku.ui.home.HomeFragment
 import com.capstone.arahku.ui.notification.NotificationFragment

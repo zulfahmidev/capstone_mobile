@@ -26,16 +26,21 @@ class UniversityAdapter(private val universityList: List<University>): RecyclerV
     override fun onBindViewHolder(holder: UniversityAdapter.ViewHolder, position: Int) {
         val listUniversity = universityList[position]
         holder.bind(listUniversity)
-
-        holder.itemView.setOnClickListener {
-            onItemClickListener?.onItemClick(listUniversity)
-        }
     }
 
     override fun getItemCount() = universityList.size
 
     inner class ViewHolder(private val binding: ItemUniversityBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.root.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val university = universityList[position]
+                    onItemClickListener?.onItemClick(university)
+                }
+            }
+        }
         fun bind(university: University) {
             with(binding) {
                 tvUniversity.text = university.name

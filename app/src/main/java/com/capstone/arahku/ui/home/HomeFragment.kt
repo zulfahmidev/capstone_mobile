@@ -11,10 +11,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.FragmentHomeBinding
-import com.capstone.arahku.model.response.AccountData
 import com.capstone.arahku.model.UserPreference
 import com.capstone.arahku.model.dataStore
+import com.capstone.arahku.model.response.AccountData
 import com.capstone.arahku.ui.home.friend.ClosestFriendActivity
+import com.capstone.arahku.ui.home.kating.KatingActivity
 import com.capstone.arahku.ui.home.major.MajorActivity
 import com.capstone.arahku.ui.home.test.TestActivity
 import com.capstone.arahku.ui.home.university.UniversityActivity
@@ -26,6 +27,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding
     private lateinit var viewModel : ProfileViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -61,12 +63,17 @@ class HomeFragment : Fragment() {
                 }
             }
             ibMenu4.setOnClickListener {
-                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+                requireActivity().run {
+                    startActivity(Intent(this, KatingActivity::class.java))
+                }
             }
             ibMenu5.setOnClickListener {
                 requireActivity().run {
                     startActivity(Intent(this, UniversityActivity::class.java))
                 }
+            }
+            ibMenu6.setOnClickListener {
+                Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
             }
         }
     }
