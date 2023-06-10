@@ -18,6 +18,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.university.DetailUniversityActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.home.university.UniversityActivity"/>
+        <activity
+            android:name=".ui.home.university.UniversityActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.friend.ClosestFriendActivity"
             android:exported="false" />
         <activity

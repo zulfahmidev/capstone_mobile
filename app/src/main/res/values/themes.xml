@@ -43,7 +43,7 @@
     <style name="TextContentBanner">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/accent_color_1</item>
+        <item name="android:textColor">@color/secondary_color</item>
         <item name="android:paddingStart">24dp</item>
         <item name="android:paddingEnd">24dp</item>
         <item name="android:paddingTop">20dp</item>

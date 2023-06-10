@@ -74,5 +74,8 @@
     <string name="major_name">Nama Jurusan</string>
     <string name="major_description">Deskripsi Jurusan</string>
     <string name="jarak_user">Jarak User</string>
+    <string name="nama_universitas">Nama Universitas</string>
+    <string name="detail_universitas">Detail Universitas</string>
+    <string name="find_your_friend">Temukan teman seilmu, sejalan dan seperjuangan disekitarmu</string>
 
 </resources>
