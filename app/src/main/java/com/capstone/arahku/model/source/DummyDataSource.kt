@@ -42,35 +42,35 @@ object DummyDataSource {
             "Cut Nurhidayanti",
             "Makasih Kak Yanti informasinya, semoga saya juga bisa gabung di kampus yang sama",
             "18.23",
-            R.drawable.naufal,
+            R.drawable.yanti,
             R.drawable.ic_verified_1
         ),
         Chat(
             "Zulfahmi",
             "Oh iya Kak, kalau di prodi ini, kira-kira nanti apa aja yang akan dipelajari ?",
             "16.23",
-            R.drawable.naufal,
+            R.drawable.fahmi,
             R.drawable.ic_verified_1
         ),
         Chat(
             "Saiful Kamil",
             "Kalau kakak sendiri ikut organisasi apa aja kak di kampusnya ?",
             "14.23",
-            R.drawable.naufal,
+            R.drawable.saiful,
             R.drawable.ic_verified_2
         ),
         Chat(
             "Raidatun Anisa",
             "Di kawasan sekitar kampus kakak ada kontrakan atau kos-kosan gak kak ?",
             "12.23",
-            R.drawable.naufal,
+            R.drawable.raida,
             R.drawable.ic_verified_2
         ),
         Chat(
             "Miftahul Huda",
             "Kampus kakak kan swasta dan juga dibawah naungan pondok pesantren, kira-kira ada yang membedakan gak sih kak dari kampus lainnya yang juga swasta ?",
             "09.23",
-            R.drawable.naufal,
+            R.drawable.miftah,
             R.drawable.ic_verified_2
         )
     )
@@ -124,27 +124,57 @@ object DummyDataSource {
         Friends(
             "Cut Nurhidayanti",
             "300 m",
-            R.drawable.naufal
+            R.drawable.yanti
         ),
         Friends(
             "Saiful Kamil",
             "1 km",
-            R.drawable.naufal
+            R.drawable.saiful
         ),
         Friends(
             "Zulfahmi",
             "1,1 km",
-            R.drawable.naufal
+            R.drawable.fahmi
         ),
         Friends(
             "Raidatun Anisa",
             "900 m",
-            R.drawable.naufal
+            R.drawable.raida
         ),
         Friends(
             "Miftahul Huda",
             "250 km",
-            R.drawable.naufal
+            R.drawable.miftah
+        ),
+    )
+
+    val universityList = listOf(
+        University(
+            "Politeknik Negeri Lhokseumawe",
+            "Politeknik Negeri Lhokseumawe merupakan salah satu Politeknik Negeri dari 43 Politeknik Negeri yang ada di Indonesia. Sejarah berdirinya Politeknik Negeri Lhokseumawe tidak dapat dipisahkan dari peran Universitas Syiah Kuala sebagai induk dan cikal bakal lahirnya Politeknik Negeri Lhokseumawe.\n" +
+            "\n" +
+            "Politeknik Negeri Lhokseumawe merupakan satu-satunya Politeknik Negeri yang berada di Provinsi Aceh. Gedung dan fasilitas Politeknik Negeri Lhokseumawe didirikan pada tahun 1985 dengan bantuan dari Bank Dunia XIII dan mulai menyelenggarakan pendidikan sejak tanggal 5 Oktober 1987, dengan nama Politeknik Universitas Syiah Kuala.",
+            R.drawable.img_pnl
+        ),
+        University(
+            "Universitas Syiah Kuala",
+            "Lorem ipsum dolor si amet bla bla bla",
+            R.drawable.img_usk
+        ),
+        University(
+            "Universitas Nurul Jadid",
+            "Lorem ipsum dolor si amet bla bla bla",
+            R.drawable.img_unuja
+        ),
+        University(
+            "Universitas Indonesia",
+            "Lorem ipsum dolor si amet bla bla bla",
+            R.drawable.img_ui
+        ),
+        University(
+            "Universitas Gadjah Mada",
+            "Lorem ipsum dolor si amet bla bla bla",
+            R.drawable.img_ugm
         ),
     )
 }

@@ -17,6 +17,7 @@ import com.capstone.arahku.model.dataStore
 import com.capstone.arahku.ui.home.friend.ClosestFriendActivity
 import com.capstone.arahku.ui.home.major.MajorActivity
 import com.capstone.arahku.ui.home.test.TestActivity
+import com.capstone.arahku.ui.home.university.UniversityActivity
 import com.capstone.arahku.viewmodel.ProfileViewModel
 import com.capstone.arahku.viewmodel.ViewModelFactory
 
@@ -61,6 +62,11 @@ class HomeFragment : Fragment() {
             }
             ibMenu4.setOnClickListener {
                 Toast.makeText(context, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+            }
+            ibMenu5.setOnClickListener {
+                requireActivity().run {
+                    startActivity(Intent(this, UniversityActivity::class.java))
+                }
             }
         }
     }
