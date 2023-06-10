@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.capstone.arahku.MainActivity
 import com.capstone.arahku.adapter.MajorAdapter
 import com.capstone.arahku.databinding.ActivityMajorBinding
 import com.capstone.arahku.model.source.DummyDataSource
@@ -35,6 +36,9 @@ class MajorActivity : AppCompatActivity(), MajorAdapter.OnItemClickListener {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        startActivity(intent)
         finish()
         return true
     }

@@ -77,5 +77,7 @@
     <string name="nama_universitas">Nama Universitas</string>
     <string name="detail_universitas">Detail Universitas</string>
     <string name="find_your_friend">Temukan teman seilmu, sejalan dan seperjuangan disekitarmu</string>
+    <string name="nama_kating">Nama Kating</string>
+    <string name="semester">Semester</string>
 
 </resources>

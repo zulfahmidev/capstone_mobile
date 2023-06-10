@@ -3,7 +3,6 @@ package com.capstone.arahku.ui.home.test
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ContentInfoCompat
 import com.capstone.arahku.MainActivity
 import com.capstone.arahku.R
 import com.capstone.arahku.databinding.ActivityTestResultBinding
