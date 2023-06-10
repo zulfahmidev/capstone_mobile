@@ -53,7 +53,7 @@
         android:textColor="@color/secondary_color"
         android:textSize="24sp"
         android:textStyle="italic|bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_more"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         tools:text="Jurusan" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_more"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginHorizontal="30dp"

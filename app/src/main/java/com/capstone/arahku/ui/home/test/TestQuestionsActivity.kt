@@ -32,31 +32,6 @@ class TestQuestionsActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         viewModelSetup()
-    }
-
-    private fun viewModelSetup(){
-        val pref = UserPreference.getInstance(dataStore)
-        questionViewModel = ViewModelProvider(this@TestQuestionsActivity, ViewModelFactory(pref))[QuestionViewModel::class.java]
-
-        questionViewModel.apply {
-            question.observe(this@TestQuestionsActivity){questionList ->
-                setData(questionList)
-            }
-
-            isLoading.observe(this@TestQuestionsActivity){
-                showLoading(it)
-            }
-        }
-
-    }
-
-
-    private fun setData(question: List<FieldsItemForm?>?){
-        rv = binding.rvQuestion
-        questionAdapter = QuestionAdapter(question)
-        rv.adapter = questionAdapter
-        rv.layoutManager = LinearLayoutManager(this@TestQuestionsActivity)
-
         binding.btnSubmit.setOnClickListener {
             val responseItem = mutableListOf<ResponsesItem>()
             for (items in questionAdapter.getItems()!!){
@@ -89,6 +64,32 @@ class TestQuestionsActivity : AppCompatActivity() {
                 }
             }
         }
+
+    }
+
+
+    private fun viewModelSetup(){
+        val pref = UserPreference.getInstance(dataStore)
+        questionViewModel = ViewModelProvider(this@TestQuestionsActivity, ViewModelFactory(pref))[QuestionViewModel::class.java]
+
+        questionViewModel.apply {
+            question.observe(this@TestQuestionsActivity){questionList ->
+                setData(questionList)
+            }
+
+            isLoading.observe(this@TestQuestionsActivity){
+                showLoading(it)
+            }
+        }
+
+    }
+
+
+    private fun setData(question: List<FieldsItemForm?>?){
+        rv = binding.rvQuestion
+        questionAdapter = QuestionAdapter(question)
+        rv.adapter = questionAdapter
+        rv.layoutManager = LinearLayoutManager(this@TestQuestionsActivity)
     }
 
     private fun showLoading(isLoading: Boolean){
