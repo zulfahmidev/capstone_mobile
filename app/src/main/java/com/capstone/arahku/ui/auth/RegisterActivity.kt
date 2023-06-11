@@ -11,6 +11,9 @@ import com.capstone.arahku.databinding.ActivityRegisterBinding
 import com.capstone.arahku.model.response.RegisterBody
 import com.capstone.arahku.ui.LandingPageActivity
 import com.capstone.arahku.viewmodel.RegisterViewModel
+import com.google.android.material.datepicker.MaterialDatePicker
+import java.text.SimpleDateFormat
+import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -35,6 +38,24 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun viewModelSetup(){
         registerViewModel = ViewModelProvider(this@RegisterActivity)[RegisterViewModel::class.java]
+    }
+
+
+    fun showDatePickerDialog(view: View) {
+        val builder = MaterialDatePicker.Builder.datePicker()
+        val picker = builder.build()
+
+        picker.addOnPositiveButtonClickListener { selection ->
+            val calendar = Calendar.getInstance()
+            calendar.timeInMillis = selection
+
+            val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+            val formattedDate = dateFormat.format(calendar.time)
+
+            binding.edRegisterBirth.setText(formattedDate)
+        }
+
+        picker.show(supportFragmentManager, picker.toString())
     }
 
     private fun registerSetup(){
