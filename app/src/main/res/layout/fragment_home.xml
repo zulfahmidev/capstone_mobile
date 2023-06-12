@@ -193,14 +193,16 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ib_menu_5"
                 style="@style/MenuContent"
+                android:layout_marginHorizontal="64dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginBottom="35dp"
+                android:layout_marginEnd="64dp"
                 android:src="@drawable/icon_universitas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ib_menu_6"
+                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
                 app:riv_corner_radius="6dp"
                 app:riv_mutate_background="true"
-                android:layout_marginStart="64dp"
-                android:layout_marginHorizontal="64dp"
-                android:layout_marginBottom="35dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/ib_menu_4"
                 tools:ignore="ContentDescription" />
 
             <TextView

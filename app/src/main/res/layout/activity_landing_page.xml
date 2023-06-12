@@ -10,8 +10,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/landing_card"
         android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="-8dp"
+        android:layout_height="385dp"
+        android:layout_marginTop="-5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="385dp"
             android:scaleType="fitXY"
             android:src="@drawable/landing_img"
             android:contentDescription="@string/cd_landing_image" />
@@ -37,7 +37,8 @@
         android:id="@+id/tv_welcome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
         android:text="@string/welcome_to_arahku"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -51,6 +52,7 @@
         android:id="@+id/tv_moto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
         android:text="@string/slogan_arahku"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -60,11 +62,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/landing_btn_register"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="18dp"
         android:backgroundTint="@color/accent_color_2"
         android:text="@string/txt_btn_register"
         android:textStyle="bold"
@@ -75,10 +76,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/landing_btn_login"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="2dp"
         android:backgroundTint="@color/accent_color_1"
         android:text="@string/txt_btn_login"
