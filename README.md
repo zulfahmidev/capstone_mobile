@@ -1,4 +1,1 @@
-# capstone_mobile
-
-Repository untuk Capstone Project Divisi Mobile Development
-Tim C23-PS397 : Projek Mobile Apps "Arahku"
+# Interest and Talent Test App "Arahku" By C23-PS397 - Capstone Project Bangkit 2023
