@@ -107,7 +107,8 @@
                 android:ems="10"
                 android:focusable="false"
                 android:inputType="none"
-                android:onClick="showDatePickerDialog"/>
+                android:onClick="showDatePickerDialog"
+                tools:ignore="UsingOnClickInXml" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
