@@ -129,7 +129,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun isValidEmail(email: String): Boolean {
-        val pattern = Pattern.compile("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")
+        val pattern = Pattern.compile("[a-zA-Z\\d._-]+@[a-z]+\\.+[a-z]+")
         return pattern.matcher(email).matches()
     }
 }
