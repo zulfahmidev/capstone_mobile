@@ -79,5 +79,7 @@
     <string name="find_your_friend">Temukan teman seilmu, sejalan dan seperjuangan disekitarmu</string>
     <string name="nama_kating">Nama Kating</string>
     <string name="semester">Semester</string>
+    <string name="password_validation_error">Password tidak boleh kurang dari 6</string>
+    <string name="email_validation_error">Format email salah</string>
 
 </resources>

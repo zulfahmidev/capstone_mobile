@@ -2,6 +2,8 @@ package com.capstone.arahku.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +13,10 @@ import com.capstone.arahku.databinding.ActivityRegisterBinding
 import com.capstone.arahku.model.response.RegisterBody
 import com.capstone.arahku.ui.LandingPageActivity
 import com.capstone.arahku.viewmodel.RegisterViewModel
+import com.google.android.material.datepicker.MaterialDatePicker
+import java.text.SimpleDateFormat
+import java.util.*
+import java.util.regex.Pattern
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -31,10 +37,30 @@ class RegisterActivity : AppCompatActivity() {
 
         viewModelSetup()
         registerSetup()
+        setupEmailValidation()
+        setupPasswordValidation()
     }
 
     private fun viewModelSetup(){
         registerViewModel = ViewModelProvider(this@RegisterActivity)[RegisterViewModel::class.java]
+    }
+
+
+    fun showDatePickerDialog(view: View) {
+        val builder = MaterialDatePicker.Builder.datePicker()
+        val picker = builder.build()
+
+        picker.addOnPositiveButtonClickListener { selection ->
+            val calendar = Calendar.getInstance()
+            calendar.timeInMillis = selection
+
+            val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+            val formattedDate = dateFormat.format(calendar.time)
+
+            binding.edRegisterBirth.setText(formattedDate)
+        }
+
+        picker.show(supportFragmentManager, picker.toString())
     }
 
     private fun registerSetup(){
@@ -56,22 +82,22 @@ class RegisterActivity : AppCompatActivity() {
 
             when{
                 name.isEmpty() ->{
-                    binding.edRegisterName.error = getString(R.string.empty_field_error)
+                    binding.nameEditTextLayout.error = getString(R.string.empty_field_error)
                 }
                 email.isEmpty() -> {
-                    binding.edRegisterEmail.error = getString(R.string.empty_field_error)
+                    binding.emailEditTextLayout.error = getString(R.string.empty_field_error)
                 }
                 password.isEmpty() -> {
-                    binding.edRegisterPassword.error = getString(R.string.empty_field_error)
+                    binding.passwordEditTextLayout.error = getString(R.string.empty_field_error)
                 }
                 phone.isEmpty() -> {
-                    binding.edRegisterTelephone.error = getString(R.string.empty_field_error)
+                    binding.telephoneEditTextLayout.error = getString(R.string.empty_field_error)
                 }
                 address.isEmpty() -> {
-                    binding.edRegisterAddress.error = getString(R.string.empty_field_error)
+                    binding.addressEditTextLayout.error = getString(R.string.empty_field_error)
                 }
                 password.isEmpty() -> {
-                    binding.edRegisterPassword.error = getString(R.string.empty_field_error)
+                    binding.passwordEditTextLayout.error = getString(R.string.empty_field_error)
                 }
                 else -> {
                     registerViewModel.register(body)
@@ -97,13 +123,55 @@ class RegisterActivity : AppCompatActivity() {
                     .setMessage(R.string.register_failure_message)
                     .setNegativeButton("Ya", null)
                     .show()
-                    .create()
             }
         }
 
         registerViewModel.isLoading.observe(this@RegisterActivity){isLoading ->
             showLoading(isLoading)
         }
+    }
+
+    private fun setupEmailValidation() {
+        binding.edRegisterEmail.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val email = s.toString()
+                if (!isValidEmail(email)) {
+                    binding.emailEditTextLayout.error = getString(R.string.email_validation_error)
+                } else {
+                    binding.emailEditTextLayout.error = null
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+        })
+    }
+
+    private fun setupPasswordValidation(){
+        binding.edRegisterPassword.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val password = s.toString()
+                if (password.length < 6) {
+                    binding.passwordEditTextLayout.error = getString(R.string.password_validation_error)
+                }else{
+                    binding.passwordEditTextLayout.error = null
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+        })
+    }
+
+    private fun isValidEmail(email: String): Boolean {
+        val pattern = Pattern.compile("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")
+        return pattern.matcher(email).matches()
     }
 
     private fun showLoading(isLoading: Boolean){
