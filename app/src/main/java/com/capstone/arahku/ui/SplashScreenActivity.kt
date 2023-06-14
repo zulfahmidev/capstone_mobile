@@ -2,13 +2,12 @@ package com.capstone.arahku.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
 import com.capstone.arahku.MainActivity
 import com.capstone.arahku.R
 import com.capstone.arahku.model.UserPreference

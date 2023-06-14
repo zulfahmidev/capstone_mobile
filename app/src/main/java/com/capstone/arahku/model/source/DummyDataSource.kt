@@ -22,7 +22,7 @@ object DummyDataSource {
         ),
         MenuTest(
             "Tes Kesesuaian Jurusan",
-            "Tes kelayakan jurusan adalah sebuah evaluasi yang bertujuan untuk membantu calon mahasiswa menentukan kesesuaian mereka dengan jurusan yang mereka pilih. Tes ini melibatkan penilaian minat, kemampuan, kepribadian, dan nilai-nilai individu. Dengan menggunakan serangkaian pertanyaan dan tugas, tes ini memberikan gambaran yang komprehensif tentang apakah seseorang cocok untuk memasuki jurusan yang diinginkan.\n" +
+            "Tes kesesuaian jurusan adalah sebuah evaluasi yang bertujuan untuk membantu calon mahasiswa menentukan kesesuaian mereka dengan jurusan yang mereka pilih. Tes ini melibatkan penilaian minat, kemampuan, kepribadian, dan nilai-nilai individu. Dengan menggunakan serangkaian pertanyaan dan tugas, tes ini memberikan gambaran yang komprehensif tentang apakah seseorang cocok untuk memasuki jurusan yang diinginkan.\n" +
                     "\n" +
                     "Hasil tes ini dapat memberikan pemahaman yang lebih baik tentang kesesuaian calon mahasiswa dengan jurusan yang dipilih, sehingga membantu mereka dalam mengambil keputusan yang lebih terinformasi dan mempersiapkan diri dengan baik untuk masa depan akademik mereka.",
             R.drawable.img_kesesuaian_jurusan,
