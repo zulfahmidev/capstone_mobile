@@ -2,8 +2,17 @@
 # About
 Arahku -  Interest and talent application as a solution to find majors that suit prospective students' passions. 
 ![Arahku](https://github.com/zulfahmidev/capstone_mobile/assets/97874264/3c6ce5c6-aaec-4fe8-aced-009201b70b87)
+# WorkFlow
+``` bash
+1. Research and Analysis Interface Concept
+2. Create UI/UX Design
+3. Slicing UI Design into Android Studio
+4. Build features and integration to API
+5. Fixing Bugs and Errors
+6. Performing testing on the completed app
+```
 # Technologies
-Project is created with:
+The project is created with:
 *  Android Studio
 *  Kotlin
 *  Retrofit 
