@@ -8,6 +8,11 @@ Project is created with:
 *  Kotlin
 *  Retrofit 
 *  Consume API
+# Setup
+> Clone Repository
+``` bash
+# clone your repository
+$ git clone https://github.com/zulfahmidev/capstone_mobile.git
 # Run App
 > Android Studio
 ``` bash
