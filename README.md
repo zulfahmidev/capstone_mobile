@@ -13,6 +13,7 @@ Project is created with:
 ``` bash
 # clone your repository
 $ git clone https://github.com/zulfahmidev/capstone_mobile.git
+```
 # Run App
 > Android Studio
 ``` bash
