@@ -36,6 +36,6 @@ $ git clone https://github.com/zulfahmidev/capstone_mobile.git
 # User Interface Design Concept
 Figma : https://www.figma.com/file/sAaBEE2EvRt6Tv9ixooJlJ/UI-Design?type=design&node-id=27-3&t=3qT1l3PL2RM0XM19-0
 # Download APK here
-Link : (soon)
+Run the app by installing the apk [here](https://bit.ly/ApkArahku)
 # Presentation's Video
 Youtube Link : (soon)
